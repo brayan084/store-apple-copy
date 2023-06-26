@@ -9,6 +9,7 @@ function App() {
   return (
     <div>
       <brayan></brayan>
+      <valentina><valentina/>
     </div>
   );
 }
