@@ -1,4 +1,4 @@
-export const ProductService = {
+export const Productos = {
     /* Array de objeto */
     getProductsData() {
         return [

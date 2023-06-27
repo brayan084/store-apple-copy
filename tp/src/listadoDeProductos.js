@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { classNames } from 'primereact/utils';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
-import { ProductService } from './productos';
+import { Productos } from './productos';
 import { Toast } from 'primereact/toast';
 import { Button } from 'primereact/button';
 import { Rating } from 'primereact/rating';
@@ -39,7 +39,7 @@ export default function ProductsDemo() {
     const dt = useRef(null);
 
     useEffect(() => {
-        ProductService.getProducts().then((data) => setProducts(data));
+        Productos.getProducts().then((data) => setProducts(data));
     }, []);
 
     const formatCurrency = (value) => {
@@ -133,10 +133,6 @@ export default function ProductsDemo() {
         return id;
     };
 
-    const exportCSV = () => {
-        dt.current.exportCSV();
-    };
-
     const confirmDeleteSelected = () => {
         setDeleteProductsDialog(true);
     };
@@ -182,10 +178,6 @@ export default function ProductsDemo() {
                 <Button label="Delete" icon="pi pi-trash" severity="danger" raised rounded onClick={confirmDeleteSelected} disabled={!selectedProducts || !selectedProducts.length} />
             </div>
         );
-    };
-
-    const rightToolbarTemplate = () => {
-        return <Button label="Export" icon="pi pi-upload" raised rounded className="p-button-help" onClick={exportCSV} />;
     };
 
     /* Función que trae un elemento del array de objetos. En este caso trae el nombre comercial */
@@ -282,7 +274,7 @@ export default function ProductsDemo() {
         <div>
             <Toast ref={toast} />
             <div className="card">
-                <Toolbar className="mb-4" left={leftToolbarTemplate} right={rightToolbarTemplate}></Toolbar>
+                <Toolbar className="mb-4" left={leftToolbarTemplate}></Toolbar>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id" globalFilter={globalFilter} header={header}>
