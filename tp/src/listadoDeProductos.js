@@ -17,12 +17,12 @@ import { Tag } from 'primereact/tag';
 export default function ProductsDemo() {
     let emptyProduct = {
         id: null,
-        name: '',
-        image: null,
-        description: '',
-        category: null,
-        price: 0,
-        quantity: 0,
+        nombre: '',
+        imagen: null,
+        descripcion: '',
+        categoria: null,
+        precio: 0,
+        cantidad: 0,
         rating: 0,
         inventoryStatus: 'INSTOCK'
     };
@@ -146,10 +146,10 @@ export default function ProductsDemo() {
         toast.current.show({ severity: 'success', summary: 'Successful', detail: 'Products Deleted', life: 3000 });
     };
 
-    const onCategoryChange = (e) => {
+    const oncategoriaChange = (e) => {
         let _product = { ...product };
 
-        _product['category'] = e.value;
+        _product['categoria'] = e.value;
         setProduct(_product);
     };
 
@@ -180,37 +180,32 @@ export default function ProductsDemo() {
         );
     };
 
-    /* Función que trae un elemento del array de objetos. En este caso trae el nombre comercial */
     const nombreComercial = (product) => {
         return formatCurrency(product.nombreComercial);
     };
 
-    /* Función que trae un elemento del array de objetos. En este caso trae el precio */
     const priceBodyTemplate = (rowData) => {
-        return formatCurrency(rowData.price);
+        return formatCurrency(rowData.precio);
     };
 
-    /* Función que trae un elemento del array de objetos. En este caso trae el id */
     const iD = (product) => {
         return formatCurrency(product.id);
     };
 
-    /* Función que trae un elemento del array de objetos. En este caso trae el precio de compra */
     const precioDeCompra = (product) => {
         return formatCurrency(product.compra);
     };
 
-    /* Función que trae un elemento del array de objetos. En este caso trae el proveedor */
     const proveedor = (product) => {
-        return formatCurrency(product.provider);
+        return formatCurrency(product.proveedor);
     };
 
     const imageBodyTemplate = (rowData) => {
-        return <img src={`https://primefaces.org/cdn/primereact/images/product/${rowData.image}`} alt={rowData.image} className="shadow-2 border-round" style={{ width: '64px' }} />;
+        return <img src={`https://primefaces.org/cdn/primereact/images/product/${rowData.imagen}`} alt={rowData.image} className="shadow-2 border-round" style={{ width: '64px' }} />;
     };
 
     const ratingBodyTemplate = (rowData) => {
-        return <Rating value={rowData.rating} readOnly cancel={false} />;
+        return <Rating value={rowData.reseñas} readOnly cancel={false} />;
     };
 
     const statusBodyTemplate = (rowData) => {
@@ -244,7 +239,7 @@ export default function ProductsDemo() {
 
     const header = (
         <div className="flex flex-wrap gap-2 align-items-center justify-content-between">
-            <h4 className="m-0">Manage Products</h4>
+            <h4 className="m-0">Listado de Productos</h4>
             <span className="p-input-icon-left">
                 <i className="pi pi-search" />
                 <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Search..." />
@@ -279,13 +274,13 @@ export default function ProductsDemo() {
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id" globalFilter={globalFilter} header={header}>
                     <Column selectionMode="multiple" exportable={false}></Column>
-                    <Column field="code" header="Id" body={iD}></Column>
-                    <Column field="name" header="Name" sortable style={{ minWidth: '16rem' }}></Column>
+                    <Column field="id" header="Id" body={iD}></Column>
+                    <Column field="nombre" header="Nombre" sortable style={{ minWidth: '16rem' }}></Column>
                     <Column field="nombreComercial" header="Nombre Comercial" body={nombreComercial}></Column>
-                    <Column field="image" header="Image" body={imageBodyTemplate}></Column>
-                    <Column field="price" header="Price" body={priceBodyTemplate} sortable style={{ minWidth: '8rem' }}></Column>
-                    <Column field="category" header="Category" sortable style={{ minWidth: '10rem' }}></Column>
-                    <Column field="rating" header="Reviews" body={ratingBodyTemplate} sortable style={{ minWidth: '12rem' }}></Column>
+                    <Column field="imagen" header="Imagen" body={imageBodyTemplate}></Column>
+                    <Column field="precio" header="Precio" body={priceBodyTemplate} sortable style={{ minWidth: '8rem' }}></Column>
+                    <Column field="categoria" header="Categoría" sortable style={{ minWidth: '10rem' }}></Column>
+                    <Column field="reseñas" header="Reseñas" body={ratingBodyTemplate} sortable style={{ minWidth: '12rem' }}></Column>
                     <Column field="inventoryStatus" header="Status" body={statusBodyTemplate} sortable style={{ minWidth: '12rem' }}></Column>
                     <Column field="proveedor" header="Proveedor" body={proveedor}></Column>
                     <Column field="compra" header="Compra" body={precioDeCompra}></Column>
@@ -293,56 +288,56 @@ export default function ProductsDemo() {
                 </DataTable>
             </div>
 
-            <Dialog visible={productDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Product Details" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
-                {product.image && <img src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`} alt={product.image} className="product-image block m-auto pb-3" />}
+            <Dialog visible={productDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Detalle de Producto" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
+                {product.image && <img src={`https://primefaces.org/cdn/primereact/images/product/${product.imagen}`} alt={product.imagen} className="product-image block m-auto pb-3" />}
                 <div className="field">
-                    <label htmlFor="name" className="font-bold">
-                        Name
+                    <label htmlFor="nombre" className="font-bold">
+                        Nombre
                     </label>
-                    <InputText id="name" value={product.name} onChange={(e) => onInputChange(e, 'name')} required autoFocus className={classNames({ 'p-invalid': submitted && !product.name })} />
-                    {submitted && !product.name && <small className="p-error">Name is required.</small>}
+                    <InputText id="nombre" value={product.nombre} onChange={(e) => onInputChange(e, 'nombre')} required autoFocus className={classNames({ 'p-invalid': submitted && !product.nombre })} />
+                    {submitted && !product.nombre && <small className="p-error">Se requiere un nombre.</small>}
                 </div>
                 <div className="field">
-                    <label htmlFor="description" className="font-bold">
-                        Description
+                    <label htmlFor="descripcion" className="font-bold">
+                        Descripción
                     </label>
-                    <InputTextarea id="description" value={product.description} onChange={(e) => onInputChange(e, 'description')} required rows={3} cols={20} />
+                    <InputTextarea id="descripcion" value={product.descripcion} onChange={(e) => onInputChange(e, 'descripcion')} required rows={3} cols={20} />
                 </div>
 
                 <div className="field">
-                    <label className="mb-3 font-bold">Category</label>
+                    <label className="mb-3 font-bold">Categoría</label>
                     <div className="formgrid grid">
                         <div className="field-radiobutton col-6">
-                            <RadioButton inputId="category1" name="category" value="Accessories" onChange={onCategoryChange} checked={product.category === 'Accessories'} />
-                            <label htmlFor="category1">Accessories</label>
+                            <RadioButton inputId="categoria1" name="categoria" value="Accessories" onChange={oncategoriaChange} checked={product.categoria === 'Accesorios'} />
+                            <label htmlFor="categoria1">Accesorios</label>
                         </div>
                         <div className="field-radiobutton col-6">
-                            <RadioButton inputId="category2" name="category" value="Clothing" onChange={onCategoryChange} checked={product.category === 'Clothing'} />
-                            <label htmlFor="category2">Clothing</label>
+                            <RadioButton inputId="categoria2" name="categoria" value="Ropa" onChange={oncategoriaChange} checked={product.categoria === 'Ropa'} />
+                            <label htmlFor="categoria2">Ropa</label>
                         </div>
                         <div className="field-radiobutton col-6">
-                            <RadioButton inputId="category3" name="category" value="Electronics" onChange={onCategoryChange} checked={product.category === 'Electronics'} />
-                            <label htmlFor="category3">Electronics</label>
+                            <RadioButton inputId="categoria3" name="categoria" value="Tecnología" onChange={oncategoriaChange} checked={product.categoria === 'Tecnología'} />
+                            <label htmlFor="categoria3">Tecnología</label>
                         </div>
                         <div className="field-radiobutton col-6">
-                            <RadioButton inputId="category4" name="category" value="Fitness" onChange={onCategoryChange} checked={product.category === 'Fitness'} />
-                            <label htmlFor="category4">Fitness</label>
+                            <RadioButton inputId="categoria4" name="categoria" value="Deporte" onChange={oncategoriaChange} checked={product.categoria === 'Deporte'} />
+                            <label htmlFor="categoria4">Deporte</label>
                         </div>
                     </div>
                 </div>
 
                 <div className="formgrid grid">
                     <div className="field col">
-                        <label htmlFor="price" className="font-bold">
-                            Price
+                        <label htmlFor="precio" className="font-bold">
+                            Precio
                         </label>
-                        <InputNumber id="price" value={product.price} onValueChange={(e) => onInputNumberChange(e, 'price')} mode="currency" currency="USD" locale="en-US" />
+                        <InputNumber id="precio" value={product.precio} onValueChange={(e) => onInputNumberChange(e, 'precio')} mode="currency" currency="USD" locale="en-US" />
                     </div>
                     <div className="field col">
-                        <label htmlFor="quantity" className="font-bold">
-                            Quantity
+                        <label htmlFor="cantidad" className="font-bold">
+                            Cantidad
                         </label>
-                        <InputNumber id="quantity" value={product.quantity} onValueChange={(e) => onInputNumberChange(e, 'quantity')} />
+                        <InputNumber id="cantidad" value={product.cantidad} onValueChange={(e) => onInputNumberChange(e, 'cantidad')} />
                     </div>
                 </div>
             </Dialog>
@@ -352,7 +347,7 @@ export default function ProductsDemo() {
                     <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
                     {product && (
                         <span>
-                            Are you sure you want to delete <b>{product.name}</b>?
+                            Seguro quieres eliminar <b>{product.name}</b>?
                         </span>
                     )}
                 </div>
@@ -361,7 +356,7 @@ export default function ProductsDemo() {
             <Dialog visible={deleteProductsDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Confirm" modal footer={deleteProductsDialogFooter} onHide={hideDeleteProductsDialog}>
                 <div className="confirmation-content">
                     <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
-                    {product && <span>Are you sure you want to delete the selected products?</span>}
+                    {product && <span>Seguro quieres eliminar esta selección de productos?</span>}
                 </div>
             </Dialog>
         </div>
