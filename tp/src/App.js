@@ -8,7 +8,7 @@ import "primeflex/primeflex.css";
 function App() {
   return (
     <div>
-      <brayan></brayan>
+      
     </div>
   );
 }
