@@ -34,7 +34,6 @@ export default function ProductsDemo() {
     const [product, setProduct] = useState(emptyProduct);
     const [selectedProducts, setSelectedProducts] = useState(null);
     const [submitted, setSubmitted] = useState(false);
-    const [globalFilter, setGlobalFilter] = useState(null);
     const toast = useRef(null);
     const dt = useRef(null);
 
@@ -205,7 +204,7 @@ export default function ProductsDemo() {
     };
 
     const ratingBodyTemplate = (rowData) => {
-        return <Rating value={rowData.reseñas} readOnly cancel={false} />;
+        return <Rating value={rowData.rating} readOnly cancel={false} />;
     };
 
     const statusBodyTemplate = (rowData) => {
@@ -240,10 +239,6 @@ export default function ProductsDemo() {
     const header = (
         <div className="flex flex-wrap gap-2 align-items-center justify-content-between">
             <h4 className="m-0">Listado de Productos</h4>
-            <span className="p-input-icon-left">
-                <i className="pi pi-search" />
-                <InputText type="search" onInput={(e) => setGlobalFilter(e.target.value)} placeholder="Search..." />
-            </span>
         </div>
     );
     const productDialogFooter = (
@@ -269,10 +264,10 @@ export default function ProductsDemo() {
         <div>
             <Toast ref={toast} />
             <div className="card">
-                <Toolbar className="mb-4" left={leftToolbarTemplate}></Toolbar>
+                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '20rem' }}></Toolbar>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
-                        dataKey="id" globalFilter={globalFilter} header={header}>
+                        dataKey="id" header={header}>
                     <Column selectionMode="multiple" exportable={false}></Column>
                     <Column field="id" header="Id" body={iD}></Column>
                     <Column field="nombre" header="Nombre" sortable style={{ minWidth: '16rem' }}></Column>
