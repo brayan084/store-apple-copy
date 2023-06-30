@@ -200,7 +200,7 @@ export default function ProductsDemo() {
     };
 
     const imageBodyTemplate = (rowData) => {
-        return <img src={`https://primefaces.org/cdn/primereact/images/product/${rowData.imagen}`} alt={rowData.image} className="shadow-2 border-round" style={{ width: '64px' }} />;
+        return <img src={`https://i.ibb.co/${rowData.imagen}`} alt={rowData.image} className="shadow-2 border-round" style={{ width: '64px' }} />;
     };
 
     const ratingBodyTemplate = (rowData) => {
@@ -284,7 +284,7 @@ export default function ProductsDemo() {
             </div>
 
             <Dialog visible={productDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Detalle de Producto" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
-                {product.image && <img src={`https://primefaces.org/cdn/primereact/images/product/${product.imagen}`} alt={product.imagen} className="product-image block m-auto pb-3" />}
+                {product.imagen && <img src={`https://i.ibb.co/${product.imagen}`} alt={product.imagen} className="product-image block m-auto pb-3" />}
                 <div className="field">
                     <label htmlFor="nombre" className="font-bold">
                         Nombre
