@@ -28,7 +28,7 @@ var Compras_iMac = [45, 50, 5];
 var Compras_iPhone = [20, 25, 10];
 var Compras_iPad = [25, 30, 35];
 
-let Proveedor = ['aptecno.ar', "alex", "juan"]
+let Proveedor = ['aptecno.ar', "appalex.ar", "apjuan.ar"]
 
 
 var misoptions = {
