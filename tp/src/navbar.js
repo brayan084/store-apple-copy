@@ -11,7 +11,7 @@ export default function Navbar() {
         {
             label: 'Productos',
             icon: 'pi pi-fw pi-apple',
-            url:'/pedidos'
+            url:'/'
         },
         {
             label: 'Proveedores',
@@ -25,6 +25,11 @@ export default function Navbar() {
         },
         {
             label: 'Pedidos',
+            icon: 'pi pi-fw pi-user-plus',
+            url:'/Pedidos'
+        },
+        {
+            label: 'Reportes',
             icon: 'pi pi-fw pi-shopping-cart',
             items: [
                 {
@@ -35,11 +40,11 @@ export default function Navbar() {
                 {
                     label: 'Reportes de compras',
                     icon: 'pi pi-fw pi-chart-bar',
-                    url:'/reportesCompras'
+                    url:'/ReportesCompras'
                 }
 
             ]
-        }
+        },
     ];
 
     return (

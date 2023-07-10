@@ -9,6 +9,7 @@ import Catalogo from './catalogo';
 import Footer from './footer';
 import Pedido from './pedido';
 import Reportes1 from './reportes';
+import Reportes2 from './reportesCompras';
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/' element={<Catalogo />}></Route>
           <Route path='/Pedidos' element={<Pedido />}></Route>
           <Route path='/ReportesVentas' element={<Reportes1 />}></Route>
+          <Route path='/ReportesCompras' element={<Reportes2 />}></Route>
         </Routes>
         <div><Footer /></div>
       </Router>
