@@ -7,6 +7,7 @@ import Banner from './banner';
 import Catalogo from './catalogo';
 /* import ListadoDeProductos from './listadoDeProductos'; */
 import Footer from './footer';
+import Pedido from './pedido';
 
 
 
@@ -18,6 +19,7 @@ function App() {
       <div><CarouselF /></div>
       <div><Catalogo /></div>
       <div><Footer /></div>
+      <div><Pedido/></div>
       {/* <Router>
         <div><Navbar /></div>
         <Routes>
