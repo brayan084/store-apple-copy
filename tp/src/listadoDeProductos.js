@@ -129,7 +129,7 @@ export default function ProductsDemo() {
             id += chars.charAt(Math.floor(Math.random() * chars.length));
         }
 
-        return id;
+        return id;  
     };
 
     const confirmDeleteSelected = () => {
@@ -263,8 +263,8 @@ export default function ProductsDemo() {
     return (
         <div>
             <Toast ref={toast} />
-            <div className="card">
-                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '20rem' }}></Toolbar>
+            <div>
+                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '10rem' }}></Toolbar>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id" header={header}>
