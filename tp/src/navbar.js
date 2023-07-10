@@ -30,7 +30,7 @@ export default function Navbar() {
                 {
                     label: 'Reportes de ventas',
                     icon: 'pi pi-fw pi-chart-bar',
-                    url:'/reportesVentas'
+                    url:'ReportesVentas'
                 },
                 {
                     label: 'Reportes de compras',

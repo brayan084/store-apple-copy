@@ -8,6 +8,7 @@ import Banner from './banner';
 import Catalogo from './catalogo';
 import Footer from './footer';
 import Pedido from './pedido';
+import Reportes1 from './reportes';
 
 
 
@@ -22,7 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Catalogo />}></Route>
           <Route path='/Pedidos' element={<Pedido />}></Route>
-          <Route path='/' element={<Pedido />}></Route>
+          <Route path='/ReportesVentas' element={<Reportes1 />}></Route>
         </Routes>
         <div><Footer /></div>
       </Router>
