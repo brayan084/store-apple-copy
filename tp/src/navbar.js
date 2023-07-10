@@ -6,12 +6,12 @@ export default function Navbar() {
         {
             label: 'Inicio',
             icon: 'pi pi-fw pi-home',
-            href:'/'
+            url:'/'
         },
         {
             label: 'Productos',
             icon: 'pi pi-fw pi-apple',
-            href:'/listadoDeProductos'
+            url:'/pedidos'
         },
         {
             label: 'Proveedores',
@@ -28,10 +28,15 @@ export default function Navbar() {
             icon: 'pi pi-fw pi-shopping-cart',
             items: [
                 {
-                    label: 'Reportes',
+                    label: 'Reportes de ventas',
                     icon: 'pi pi-fw pi-chart-bar',
-                    href:'/'
+                    url:'/reportesVentas'
                 },
+                {
+                    label: 'Reportes de compras',
+                    icon: 'pi pi-fw pi-chart-bar',
+                    url:'/reportesCompras'
+                }
 
             ]
         }

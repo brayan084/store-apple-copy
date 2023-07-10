@@ -1,11 +1,11 @@
 import React from 'react';
-/* import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; */
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+/* import ListadoDeProductos from './listadoDeProductos'; */
 import './App.css';
 import Navbar from './navbar';
 import CarouselF from './carousel';
 import Banner from './banner';
 import Catalogo from './catalogo';
-/* import ListadoDeProductos from './listadoDeProductos'; */
 import Footer from './footer';
 import Pedido from './pedido';
 
@@ -14,20 +14,18 @@ import Pedido from './pedido';
 function App() {
   return (
     <div>
-      <div><Navbar /></div> 
-      <div><Banner /></div>
-      <div><CarouselF /></div>
-      <div><Catalogo /></div>
-      <div><Footer /></div>
-      <div><Pedido/></div>
-      {/* <Router>
+      <Router>
         <div><Navbar /></div>
+        {/* <div><Banner /></div>
+        <div><CarouselF /></div>
+        <div><Catalogo /></div> */}
         <Routes>
-          <Route path='/' element={<CarouselF />}></Route>
           <Route path='/' element={<Catalogo />}></Route>
-          <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
+          <Route path='/Pedidos' element={<Pedido />}></Route>
+          <Route path='/' element={<Pedido />}></Route>
         </Routes>
-      </Router> */}
+        <div><Footer /></div>
+      </Router>
     </div>
   );
 }
