@@ -264,7 +264,7 @@ export default function ProductsDemo() {
         <div>
             <Toast ref={toast} />
             <div>
-                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '10rem' }}></Toolbar>
+                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '0rem' }}></Toolbar>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id" header={header}>

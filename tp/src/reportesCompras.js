@@ -1,4 +1,5 @@
 import { Bar } from 'react-chartjs-2';
+import "./reportes.css";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -37,19 +38,24 @@ var misoptions = {
   plugins: {
     legend: {
       display: true,
+      labels: {
+        color: 'rgba(255, 255, 255)'
+    }
     },
     title: {
       display: true,
       text: 'Reportes de compras (mes de julio)',
+      color: 'rgba(255, 255, 255)'
     },
   },
   scales: {
     y: {
       min: 0,
-      max: 50
+      max: 50,
+      ticks: { color: 'rgba(255, 255, 255)' }
     },
     x: {
-      ticks: { color: 'rgba(0, 0, 0, 0.5)' }
+      ticks: { color: 'rgba(255, 255, 255)' }
     }
   }
 };
@@ -96,7 +102,7 @@ var midata = {
 export default function Reportes2() {
 
   return (
-    <div className='d-flex'>
+    <div className='espacio'>
       <Bar data={midata} options={misoptions} />
     </div>
   )
