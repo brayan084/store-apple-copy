@@ -2,35 +2,36 @@ import React from 'react';
 import { Menubar } from 'primereact/menubar';
 
 export default function Navbar() {
+    /* array de objetos con las entradas e iconos que se veran en el nav */
     const items =[
         {
             label: 'Inicio',
             icon: 'pi pi-fw pi-home',
-            href:'/'
+            url:'/'
         },
         {
             label: 'Productos',
             icon: 'pi pi-fw pi-apple',
-            href:'/listadoDeProductos'
+            url:'/listadoDeProductos'
         },
         {
             label: 'Proveedores',
             icon: 'pi pi-fw pi-users',
-            href:'/'
+            url:'/'
         },
         {
             label: 'Clientes',
             icon: 'pi pi-fw pi-user-plus',
-            href:'/'
+            url:'/'
         },
         {
             label: 'Pedidos',
             icon: 'pi pi-fw pi-shopping-cart',
-            items: [
+            items: [ /* array de objetos para un dropdown */
                 {
                     label: 'Reportes',
                     icon: 'pi pi-fw pi-chart-bar',
-                    href:'/'
+                    url:'/'
                 },
 
             ]
@@ -38,7 +39,7 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='shadow-2'>
+        <div> {/* Menu de PrimeReact con modificación de fondo */}
             <Menubar model={items} className='bg-gray-900' />
         </div>
     )

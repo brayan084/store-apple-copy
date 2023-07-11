@@ -31,7 +31,7 @@ export default function Catalogo() {
 
     const listItem = (product) => {
         return (
-            <div className="col-12">
+            <div className="col-12" id="catalogo">
                 <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
                     <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} />
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
@@ -58,7 +58,7 @@ export default function Catalogo() {
 
     const gridItem = (product) => {
         return (
-            <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2 bg-gray-900">
+            <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2 bg-gray-900" id="catalogo">
                 <div className="p-4 border-1 surface-border surface-card border-round">
                     <div className="flex flex-wrap align-items-center justify-content-between gap-2">
                         <div className="flex align-items-center gap-2">
