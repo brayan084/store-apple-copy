@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from 'primereact/button';
-import { StyleClass } from 'primereact/styleclass';
 
 export default function Banner() {
 
@@ -17,12 +16,10 @@ export default function Banner() {
                 <p className="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Haga realidad sus ideas más brillantes e impulse la creatividad continua con tecnología inteligente.</p>
                 <Button type="button" href="#catalgo" label="Catálogo" rounded className="mt-3 font-normal bg-blue-900 px-3 text-white"></Button> {/* Botón que lleva directo al catálogo */}
             </div>
-            <StyleClass enterActiveClassName="fadein">
                 <div className="flex justify-content-center md:justify-content-end">{/* Imagen descargada de "pngwing" */}
-                    <img src="https://i.ibb.co/Q6Tgr8N/pngwing-com-3.png" alt="Hero" className="w-9 md:w-auto" />
+                    <img src="https://i.ibb.co/Q6Tgr8N/pngwing-com-3.png" alt="Hero" className="w-9 md:w-auto " />
                     {/* https://i.ibb.co/Wtgz0k8/pngwing-com-2.png https://i.ibb.co/545fN7Z/pngwing-com-1.png*/}
                 </div>
-            </StyleClass>
         </div>
     )
 }
