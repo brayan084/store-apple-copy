@@ -14,7 +14,7 @@ import { Dialog } from 'primereact/dialog';
 import { InputText } from 'primereact/inputtext';
 import { Tag } from 'primereact/tag';
 
-export default function ProductsDemo() {
+export default function ListadoDeProductos() {
     let emptyProduct = {
         id: null,
         nombre: '',
@@ -42,13 +42,8 @@ export default function ProductsDemo() {
     }, []);
 
     const formatCurrency = (value) => {
-        if (value !== undefined && value !== null) {
-            return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-        } else {
-            return '';
-        }
+        return value.toLocaleString('en-US', { style: 'currency', currency: 'USD' });
     };
-    
 
     const openNew = () => {
         setProduct(emptyProduct);
@@ -72,7 +67,7 @@ export default function ProductsDemo() {
     const saveProduct = () => {
         setSubmitted(true);
 
-        if (product.nombre.trim()) {
+        if (product.name.trim()) {
             let _products = [...products];
             let _product = { ...product };
 
@@ -83,7 +78,7 @@ export default function ProductsDemo() {
                 toast.current.show({ severity: 'success', summary: 'Successful', detail: 'Product Updated', life: 3000 });
             } else {
                 _product.id = createId();
-                _product.imagen = 'product-placeholder.svg';
+                _product.image = 'product-placeholder.svg';
                 _products.push(_product);
                 toast.current.show({ severity: 'success', summary: 'Successful', detail: 'Product Created', life: 3000 });
             }
@@ -269,7 +264,7 @@ export default function ProductsDemo() {
         <div>
             <Toast ref={toast} />
             <div>
-                <Toolbar className="mb-4" left={leftToolbarTemplate}></Toolbar>
+                <Toolbar className="mb-4" left={leftToolbarTemplate} style={{ marginTop: '10rem' }}></Toolbar>
 
                 <DataTable ref={dt} value={products} selection={selectedProducts} onSelectionChange={(e) => setSelectedProducts(e.value)}
                         dataKey="id" header={header}>
@@ -289,7 +284,7 @@ export default function ProductsDemo() {
             </div>
 
             <Dialog visible={productDialog} style={{ width: '32rem' }} breakpoints={{ '960px': '75vw', '641px': '90vw' }} header="Detalle de Producto" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
-                {product.imagen && <img src={`https://i.ibb.co/${product.imagen}`} alt={product.imagen} style={{ width: '25rem' }} className="product-image block m-auto pb-3" />}
+                {product.imagen && <img src={`https://i.ibb.co/${product.imagen}`} alt={product.imagen} className="product-image block m-auto pb-3" />}
                 <div className="field">
                     <label htmlFor="nombre" className="font-bold">
                         Nombre
@@ -362,3 +357,4 @@ export default function ProductsDemo() {
         </div>
     );
 }
+        

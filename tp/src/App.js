@@ -5,7 +5,8 @@ import Navbar from './navbar';
 import CarouselF from './carousel';
 import Banner from './banner';
 import Catalogo from './catalogo';
-import ListadoDeProductos from './listadoDeProductos';
+/* import ListadoDeProductos from './listadoDeProductos'; */
+import Lproductos from './LProductos2';
 import Footer from './footer';
 
 
@@ -17,7 +18,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<><><Banner /><CarouselF /></><Catalogo /></>}></Route>
-          <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
+          {/*<Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>*/}
+           <Route path='/LProductos2' element={<Lproductos />}></Route> 
           {/* <Route path='/' element={</>}></Route> */}
         </Routes>
         <Footer />

@@ -12,6 +12,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'OUTOFSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 1000.00,
             },
@@ -25,6 +26,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'INSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 900.00,
             },
@@ -38,6 +40,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'INSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 850.00,
             },
@@ -51,6 +54,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'LOWSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 733.00,
             },
@@ -64,6 +68,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'INSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 384.63,
             },
@@ -77,6 +82,7 @@ export const Productos = {
                 cantidad: 24,
                 inventoryStatus: 'LOWSTOCK',
                 rating: 5,
+                unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 350.00,
             },
@@ -85,7 +91,7 @@ export const Productos = {
     },
 
     getProductsMini() {
-        return Promise.resolve(this.getProductsData().slice(0, 5));
+        return Promise.resolve(this.getProductsData().slice(0, 6));
     },
 
     getProductsSmall() {

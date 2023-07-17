@@ -24,7 +24,7 @@ export default function CarouselF() {
 
 
     useEffect(() => {
-        FotosCarrusel.getProductsSmall().then((data) => setProducts(data.slice(0, 9)));
+        FotosCarrusel.getProductsSmall().then((data) => setProducts(data.slice(0, 6)));
     }, []);
 
     const productTemplate = (product) => {
@@ -39,7 +39,7 @@ export default function CarouselF() {
 
     return (
         <div style={{ marginTop: '5rem', marginBottom: '5rem' }}> {/* Del carrusel original de PrimeReact solo se utilizó la imagen, se cambiaron el tamaño de las mismas y la distancia entre ellas */}
-            <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} className="custom-carousel" circular
+            <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} circular
                 autoplayInterval={3000} itemTemplate={productTemplate} />
         </div>
     )
