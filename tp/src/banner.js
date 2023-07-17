@@ -14,7 +14,7 @@ export default function Banner() {
                     <span className="font-light block">Impulsamos</span>La Innovación
                 </h1> {/* Texto inferior */}
                 <p className="font-normal text-2xl line-height-3 md:mt-3 text-gray-700">Haga realidad sus ideas más brillantes e impulse la creatividad continua con tecnología inteligente.</p>
-                <Button type="button" href="#catalgo" label="Catálogo" rounded className="mt-3 font-normal bg-blue-900 px-3 text-white"></Button> {/* Botón que lleva directo al catálogo */}
+                <a href='#catalogo'><Button type="button" label="Catálogo" rounded className="mt-3 font-normal bg-blue-900 px-3 text-white"/></a> {/* Botón que lleva directo al catálogo */}
             </div>
                 <div className="flex justify-content-center md:justify-content-end">{/* Imagen descargada de "pngwing" */}
                     <img src="https://i.ibb.co/Q6Tgr8N/pngwing-com-3.png" alt="Hero" className="w-9 md:w-auto " />
