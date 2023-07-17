@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import Navbar from './navbar';
 import Carrusel from './carrusel';
 import Banner from './banner';
 import Catalogo from './catalogo';
-/* import Lproductos from './LProductos2'; */
+import ListadoDeProductos from './listadoDeProductos';
 import Footer from './footer';
 
 
@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<><><Banner /><Carrusel /></><Catalogo /></>}></Route>
-{/*            <Route path='/LProductos2' element={<Lproductos />}></Route> */} 
+          <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
         </Routes>
         <Footer />
       </Router>
