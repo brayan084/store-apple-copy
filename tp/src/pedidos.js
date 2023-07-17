@@ -5,7 +5,7 @@ import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
 import { Tag } from 'primereact/tag';
-import { Pedidos } from './service/ProductService';
+import { Pedidos } from './productPedidos';
 // import { InputMask } from "primereact/inputmask";
 export default function Pedido() {
     const [products, setProducts] = useState(null);
