@@ -11,4 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-  
+
+.pedidos-container {
+  margin-bottom: 40rem;
+}

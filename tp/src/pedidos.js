@@ -85,17 +85,19 @@ export default function Pedido() {
     };
 
     return (
-        <div className="card p-fluid">
-            <DataTable value={products} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
-                <Column field="id" header="Id"  style={{ width: '10%' }}></Column>
-                <Column field="name" header="Producto" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
-                <Column field="quantity" header="Cantidad" editor={(options) => numberEditor(options)} style={{ width: '10%' }}></Column>
-                <Column field="fechaDeEntrega" header="Fecha de Entrega" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
-                <Column field="fechaDeCarga" header="Fecha de Carga" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
-                <Column field="inventoryStatus" header="Estado" body={statusBodyTemplate} editor={(options) => statusEditor(options)} style={{ width: '13%' }}></Column>
-                <Column field="price" header="Precio" body={priceBodyTemplate} editor={(options) => priceEditor(options)} style={{ width: '17%' }}></Column>
-                <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
-            </DataTable>
+        <div className='pedidos-container'>
+            <div className="p-fluid">
+                <DataTable value={products} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
+                    <Column field="id" header="Id" style={{ width: '10%' }}></Column>
+                    <Column field="name" header="Producto" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
+                    <Column field="quantity" header="Cantidad" editor={(options) => numberEditor(options)} style={{ width: '10%' }}></Column>
+                    <Column field="fechaDeEntrega" header="Fecha de Entrega" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
+                    <Column field="fechaDeCarga" header="Fecha de Carga" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
+                    <Column field="inventoryStatus" header="Estado" body={statusBodyTemplate} editor={(options) => statusEditor(options)} style={{ width: '13%' }}></Column>
+                    <Column field="price" header="Precio" body={priceBodyTemplate} editor={(options) => priceEditor(options)} style={{ width: '17%' }}></Column>
+                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
+                </DataTable>
+            </div>
         </div>
     );
 }

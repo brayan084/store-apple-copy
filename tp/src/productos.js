@@ -41,7 +41,7 @@ export const Productos = {
                 inventoryStatus: 'INSTOCK',
                 rating: 5,
                 unidadDeMedida:'Unidad',
-                proveedor: 'aptecno.ar',
+                proveedor: 'appalex.ar',
                 compra: 850.00,
             },
             {
@@ -55,7 +55,7 @@ export const Productos = {
                 inventoryStatus: 'LOWSTOCK',
                 rating: 5,
                 unidadDeMedida:'Unidad',
-                proveedor: 'aptecno.ar',
+                proveedor: 'apjuan.ar',
                 compra: 733.00,
             },
             {
@@ -83,7 +83,7 @@ export const Productos = {
                 inventoryStatus: 'LOWSTOCK',
                 rating: 5,
                 unidadDeMedida:'Unidad',
-                proveedor: 'aptecno.ar',
+                proveedor: 'appalex.ar',
                 compra: 350.00,
             },
 
