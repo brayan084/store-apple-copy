@@ -9,17 +9,17 @@ export default function Catalogo() {
     const [products, setProducts] = useState([]);
     const [layout, setLayout] = useState('grid');
 
-    useEffect(() => {
-        Productos.getProducts().then((data) => setProducts(data.slice(0, 12)));
+    useEffect(() => { /* Llamada a la función para obtener datos y toma los primeros 6 */
+        Productos.getProducts().then((data) => setProducts(data.slice(0, 6)));
     }, []);
 
-    const getSeverity = (product) => {
+    const getSeverity = (product) => { /* switch que cambia el color del estado del inventario en el que se encuentre el producto */
         switch (product.inventoryStatus) {
             case 'INSTOCK':
                 return 'success';
 
             case 'LOWSTOCK':
-                return 'warning';
+                return 'warning'; 
 
             case 'OUTOFSTOCK':
                 return 'danger';
@@ -29,10 +29,12 @@ export default function Catalogo() {
         }
     };
 
-    const listItem = (product) => {
+    /* dos formatos en los que se muestran los productos usando PrimeReact */
+
+    const listItem = (product) => { /* los productos se muestran en formato de listado */
         return (
-            <div className="col-12" id="catalogo">
-                <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4">
+            <div className="col-12" id="catalogo"> {/* id para dare funcionabilidad al boton dentro del hero */}
+                <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4"> {/* las imagenes fueron subidas a imgBB, convina la parte fija "https://i.ibb.co/" con cada valor dinamico de "product.imagen" */}
                     <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} />
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
                         <div className="flex flex-column align-items-center sm:align-items-start gap-3">
@@ -48,7 +50,7 @@ export default function Catalogo() {
                         </div>
                         <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
                             <span className="text-2xl font-semibold">${product.precio}</span>
-                            <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button>
+                            <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button> {/* si el estatus del producto es OUTOFSTOCK, se desactiba el botón de compra */}
                         </div>
                     </div>
                 </div>
@@ -56,7 +58,7 @@ export default function Catalogo() {
         );
     };
 
-    const gridItem = (product) => {
+    const gridItem = (product) => { /* los productos se muestran en formato de grid */
         return (
             <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2 bg-gray-900" id="catalogo">
                 <div className="p-4 border-1 surface-border surface-card border-round">
@@ -99,7 +101,7 @@ export default function Catalogo() {
     };
 
     return (
-        <div className="card">
+        <div>
             <DataView value={products} itemTemplate={itemTemplate} layout={layout} header={header()} />
         </div>
     )

@@ -1,5 +1,5 @@
 export const FotosCarrusel = {
-    /* Array de objeto */
+    /* Array de objeto con id, nombre y el final de la url de cada img*/
     getProductsData() {
         return [
             {
@@ -37,8 +37,8 @@ export const FotosCarrusel = {
         ];
     },
 
-    getProductsSmall() {
-        return Promise.resolve(this.getProductsData().slice(0, 10));
+    getProductsSmall() {/* función que devuelve una promesa con los 6 elementos, "getProductsData" proporciona los datos */ 
+        return Promise.resolve(this.getProductsData().slice(0, 6));
     },
 
 };
