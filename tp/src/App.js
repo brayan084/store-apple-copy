@@ -18,7 +18,6 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<><><Banner /><Carrusel /></><Catalogo /></>}></Route>
-
           <Route path='/Pedidos' element={<Pedido />}></Route>
           <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
         </Routes>

@@ -9,7 +9,7 @@ export const FotosCarrusel = {
             },
             {
                 id: '2',
-                nombre: 'foto de producto',
+                nombre: 'foto de producto', 
                 imagen: 'QQvjjRb/1.png',              
             },
             {
