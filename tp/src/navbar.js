@@ -12,7 +12,7 @@ export default function Navbar() {
         {
             label: 'Productos',
             icon: 'pi pi-fw pi-apple',
-            url:'/LProductos2'
+            url:'/input'
         },
         {
             label: 'Proveedores',
