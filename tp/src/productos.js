@@ -14,7 +14,7 @@ export const Productos = {
                 rating: 5,
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',  
-                compra: 1000.00,
+                compra: 10000.00,
             },
             {
                 id: '2',
