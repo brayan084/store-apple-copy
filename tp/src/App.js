@@ -1,15 +1,23 @@
 import React from 'react';
 import './App.css';
-import "primereact/resources/themes/lara-light-indigo/theme.css";
-import 'primeicons/primeicons.css';
-import "primeflex/primeflex.css";
+import Proveedores from './proveedores';
+import ArrayClientes from './clientes';
 
 
 function App() {
   return (
     <div>
-      matias
+
+      <ArrayClientes></ArrayClientes>
+
     </div>
+
+
+
+
+
+
+
   );
 }
 
