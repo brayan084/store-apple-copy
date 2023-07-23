@@ -73,7 +73,7 @@ export const Productos = {
                 compra: 384.63,
             },
             {
-                id: '6',
+                id: '6', 
                 nombre: 'Apple Watch',
                 nombreComercial: 'Apple Watch Series 5 40mm Gps 32gb',
                 imagen: 'VvWfQvb/watch.png"',

@@ -39,7 +39,7 @@ export default function Carrusel() {
 
     return ( /* Carrusel de PrimeReact con modificaciones */
         <div style={{ marginTop: '5rem', marginBottom: '5rem' }}> {/* Del carrusel original solo se utilizó la imagen, se cambiaron el tamaño de las mismas y la distancia entre ellas */}
-            <Carousel value={products} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} circular
+            <Carousel value={products} numVisible={3} numScroll={1} responsiveOptions={responsiveOptions} circular
                 autoplayInterval={3000} itemTemplate={productTemplate} />
         </div>
     )
