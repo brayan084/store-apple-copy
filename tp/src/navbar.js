@@ -17,12 +17,12 @@ export default function Navbar() {
         {
             label: 'Proveedores',
             icon: 'pi pi-fw pi-users',
-            url:'/'
+            url:'/proveedores'
         },
         {
             label: 'Clientes',
             icon: 'pi pi-fw pi-user-plus',
-            url:'/'
+            url:'/clientes'
         },
         {
             label: 'Pedidos',

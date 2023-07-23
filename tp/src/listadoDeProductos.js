@@ -104,7 +104,7 @@ export default function ListadoDeProductos() {
     };
 
     return (
-        <div className="card p-fluid">
+        <div className="p-fluid"> {/* componente de PrimeReact */}
             <DataTable value={products} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodyStyle={{ textAlign: 'center' }}>
                 <Column field="id" header="Id" editor={(options) => textEditor(options)}></Column>
                 <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)}></Column>
