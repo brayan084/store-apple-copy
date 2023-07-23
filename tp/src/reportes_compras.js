@@ -24,15 +24,14 @@ ChartJS.register(
 );
 
 
-
-var Compras_iMac = [45, 50, 5];
-var Compras_iPhone = [20, 25, 10];
-var Compras_iPad = [25, 30, 35];
-
+/* arrays con los datos de las tablas */
+let Compras_iMac = [45, 50, 5];
+let Compras_iPhone = [20, 25, 10];
+let Compras_iPad = [25, 30, 35];
 let Proveedor = ['aptecno.ar', "appalex.ar", "apjuan.ar"]
 
-
-var misoptions = {
+// opcciones
+let misoptions = {
   responsive: true,
   animation: true,
   plugins: {
@@ -60,7 +59,8 @@ var misoptions = {
   }
 };
 
-var midata = {
+// son las columnas de la tabla
+let midata = {
   labels: Proveedor,
   datasets: [
     {
@@ -99,6 +99,8 @@ var midata = {
   ]
 };
 
+
+// el html que se renderiza
 export default function Reportes2() {
 
   return (

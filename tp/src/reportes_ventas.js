@@ -24,12 +24,16 @@ ChartJS.register(
 );
 
 
-var iMac = [72, 56, 20, 36, 80, 40, 30, 20, 25, 30, 12, 60];
-var iPhone = [23, 25, 60, 65, 45, 10, 4, 25, 35, 7, 20, 25];
-var iPad = [44, 99, 1, 23, 46, 10, 24, 25, 35, 8, 20, 25];
-var fecha = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-var misoptions = {
+/* arrays con los datos de las tablas */
+let iMac = [72, 56, 20, 36, 80, 40, 30, 20, 25, 30, 12, 60];
+let iPhone = [23, 25, 60, 65, 45, 10, 4, 25, 35, 7, 20, 25];
+let iPad = [44, 99, 1, 23, 46, 10, 24, 25, 35, 8, 20, 25];
+let fecha = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+
+// opcciones
+let misoptions = {
     responsive: true,
     animation: true,
     plugins: {
@@ -57,7 +61,9 @@ var misoptions = {
     }
 };
 
-var midata = {
+
+// son las columnas de la tabla
+let midata = {
     labels: fecha,
     datasets: [
         {
@@ -77,7 +83,7 @@ var midata = {
         }
     ]
 };
-
+// el html que se renderiza
 export default function Reportes1() {
 
     return (
