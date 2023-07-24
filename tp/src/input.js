@@ -38,7 +38,7 @@ export default function InputDemo() {
 
 
     return ( 
-        <div className="justify-content-center p-fluid ">
+        <div className="p-fluid ">
             <div className="col-12 md:col-6">
                 <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
