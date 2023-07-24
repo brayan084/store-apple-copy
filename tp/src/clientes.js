@@ -11,7 +11,7 @@ export default function Clientes() {
 
     useEffect(() => {
         ArrayClientes.getProductsMini().then((data) => setProducts(data));
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); 
 
     
 
