@@ -5,7 +5,7 @@ import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
 import { Rating } from 'primereact/rating';
-import { Tag } from 'primereact/tag';  
+import { Tag } from 'primereact/tag';
 import { Productos } from './productos';
 
 export default function ListadoDeProductos() {
@@ -13,11 +13,11 @@ export default function ListadoDeProductos() {
     const [statuses] = useState(['INSTOCK', 'LOWSTOCK', 'OUTOFSTOCK']);
     const [venta] = useState(['Unidad', 'Kilo', 'Kilogramo', 'Gramo']);
 
-    useEffect(() => {
+    useEffect(() => { /* Llamada a la función para obtener datos */
         Productos.getProductsMini().then((data) => setProducts(data));
-    }, []); 
+    }, []);
 
-    const getSeverity = (value) => {
+    const getSeverity = (value) => { /* switch que cambia el color del estado del inventario en el que se encuentre el producto */
         switch (value) {
             case 'INSTOCK':
                 return 'success';
@@ -33,7 +33,7 @@ export default function ListadoDeProductos() {
         }
     };
 
-    const onRowEditComplete = (e) => {
+    const onRowEditComplete = (e) => { /* esta función se encarga de actualizar el estado del array de productos con los nuevos datos */
         let _products = [...products];
         let { newData, index } = e;
 
@@ -42,11 +42,11 @@ export default function ListadoDeProductos() {
         setProducts(_products);
     };
 
-    const textEditor = (options) => {
+    const textEditor = (options) => { /* función que devuelve un Input Text de PrimeReact,  El valor inicial lo toma del objeto options y cualquier cambio en el valor llamará a la función editorCallback */
         return <InputText type="text" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} />;
     };
 
-    const statusEditor = (options) => {
+    const statusEditor = (options) => { /* función que crea y devuelve un Dropdown de PrimeReact con opciones de estatus */
         return (
             <Dropdown
                 value={options.value}
@@ -60,7 +60,7 @@ export default function ListadoDeProductos() {
         );
     };
 
-    const UnidadEditor = (options) => {
+    const UnidadEditor = (options) => { /* función que crea y devuelve un Dropdown de PrimeReact con opciones de unidad de medida */
         return (
             <Dropdown
                 value={options.value}
@@ -73,33 +73,34 @@ export default function ListadoDeProductos() {
             />
         );
     };
-    
 
-    const priceEditor = (options) => {
+
+
+    const priceEditor = (options) => { /* función que devuelve un Input Number de PrimeReact,  El valor inicial lo toma del objeto options y cualquier cambio en el valor llamará a la función editorCallback */
         return <InputNumber value={options.value} onValueChange={(e) => options.editorCallback(e.value)} mode="currency" currency="USD" locale="en-US" />;
     };
 
-    const statusBodyTemplate = (rowData) => {
+    const statusBodyTemplate = (rowData) => { /* función que devuelve un tag de PrimeReact, donde toma el valor del estado de inventario del objeto rowData, y severity, que toma el valor retornado por la función getSeverity al pasarle el estado de inventario */
         return <Tag value={rowData.inventoryStatus} severity={getSeverity(rowData.inventoryStatus)}></Tag>;
     };
 
-    const UnidadDeMedida = (rowData) => {
+    const UnidadDeMedida = (rowData) => { /* función que devuelve un tag de PrimeReact, donde toma el valor de la unidad de medida del objeto rowData */
         return <Tag value={rowData.unidadDeMedida}></Tag>;
     };
 
-    const imageBodyTemplate = (rowData) => {
-        return <img src={`https://i.ibb.co/${rowData.imagen}`} alt={rowData.image} className="shadow-2 border-round" style={{ width: '64px' }} />;
+    const imageBodyTemplate = (rowData) => { /* función que devuelve una imagen, dentro del src se unen el principio de la url con el valor del objeto rowdata */
+        return <img src={`https://i.ibb.co/${rowData.imagen}`} alt={rowData.nombre} className="shadow-2 border-round" style={{ width: '64px' }} />;
     };
 
-    const ratingBodyTemplate = (rowData) => {
+    const ratingBodyTemplate = (rowData) => { /* función que devuelve el Rating de PrimeReact, donde  toma el valor del rating del objeto rowdata */
         return <Rating value={rowData.rating} readOnly cancel={false} />;
     };
 
-    const priceBodyTemplate = (rowData) => {
+    const priceBodyTemplate = (rowData) => { /* función que toma el toma el valor del precio del objeto rowdata */
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(rowData.precio);
     };
 
-    const precioDeCompra = (rowData) => {
+    const precioDeCompra = (rowData) => { /* función que toma el toma el valor de compra del objeto rowdata */
         return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(rowData.compra);
     };
 
