@@ -6,7 +6,7 @@ import CarouselF from './carousel';
 import Banner from './banner';
 import Catalogo from './catalogo';
 /* import ListadoDeProductos from './listadoDeProductos'; */
-
+import BasicDemo from './CARRUSELfOTOS.JS';
 import Footer from './footer';
 import InputDemo from './input';
 
@@ -21,6 +21,7 @@ function App() {
           <Route path='/' element={<><><Banner /><CarouselF /></><Catalogo /></>}></Route>
           {/*<Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>*/}
            <Route path='/input' element={<InputDemo />}></Route> 
+           <Route path='/CARRUSELfOTOS' element={<BasicDemo />}></Route>
           {/* <Route path='/' element={</>}></Route> */}
         </Routes>
         <Footer />

@@ -39,8 +39,8 @@ export default function InputDemo() {
 
     return ( 
         <div className="p-fluid ">
-            <div className="col-12 md:col-6">
-                <div className="card">
+            <div className="col-12 md:col-6 card">
+                <div>
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
                         <div className="p-inputgroup flex-1">
                             <span className="p-inputgroup-addon">
