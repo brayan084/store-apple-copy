@@ -11,7 +11,7 @@ export default function Proveedores() {
 
     useEffect(() => {
         ArrayProveedores.getProductsMini().then((data) => setProducts(data));
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); 
 
     
  

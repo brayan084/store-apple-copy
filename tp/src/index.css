@@ -1,8 +1,9 @@
+/* estilos predeterminados de PrimeReact */
 html {
   font-size: 14px;
 }
 
-body {
+body { 
   font-family: var(--font-family);
   font-weight: normal;
   background: var(--surface-ground);
