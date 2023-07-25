@@ -19,15 +19,15 @@ export default function Footer() {
                     </div>
 
                     <div className="col-12 md:col-2 mt-2 md:mt-0 text-center">
-                        <a className="line-height-3 mb-2" href='/'><Button icon="pi pi-users" label='Proveedores' rounded text severity="secondary" aria-label="Proveedores" /></a>
+                        <a className="line-height-3 mb-2" href='/proveedores'><Button icon="pi pi-users" label='Proveedores' rounded text severity="secondary" aria-label="Proveedores" /></a>
                     </div>
 
                     <div className="col-12 md:col-2 mt-2 md:mt-0 text-center">
-                        <a className="line-height-3 mb-2" href='/'><Button icon="pi pi-user-plus" label='Clientes' rounded text severity="secondary" aria-label="Clientes" /></a>
+                        <a className="line-height-3 mb-2" href='/clientes'><Button icon="pi pi-user-plus" label='Clientes' rounded text severity="secondary" aria-label="Clientes" /></a>
                     </div>
 
                     <div className="col-12 md:col-2 mt-2 md:mt-0 text-center">
-                        <a className="line-height-3 mb-2" href='/'><Button icon="pi pi-shopping-cart" label='Pedidos' rounded text severity="secondary" aria-label="Pedidos" /></a>
+                        <a className="line-height-3 mb-2" href='/Pedidos'><Button icon="pi pi-shopping-cart" label='Pedidos' rounded text severity="secondary" aria-label="Pedidos" /></a>
                     </div>
 
                     <div className="col-12 md:col-2 mt-2 md:mt-0 text-center">
