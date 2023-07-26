@@ -17,7 +17,7 @@ export default function Navbar() {
         {
             label: 'Proveedores',
             icon: 'pi pi-fw pi-users',
-            url:'/proveedores'
+            url:'/formulario'
         },
         {
             label: 'Clientes',

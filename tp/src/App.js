@@ -12,6 +12,7 @@ import Reportes2 from './reportes_compras';
 import Reportes1 from './reportes_ventas';
 import Clientes from './clientes';
 import Proveedores from './proveedores';
+import InputDemo from './formulario';
 /* importamos cada componente */
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path='/proveedores' element={<Proveedores />}></Route>
           <Route path='/clientes' element={<Clientes />}></Route>
           <Route path='/Pedidos' element={<Pedido />}></Route>
+          <Route path='InputDemo' element={<InputDemo />}></Route>
           <Route path='/ReportesVentas' element={<Reportes1 />}></Route>
           <Route path='/ReportesCompras' element={<Reportes2 />}></Route>
         </Routes>
