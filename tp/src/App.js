@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import Navbar from './navbar';
-import Carrusel from './carrusel';
-import Hero from './hero';
-import Catalogo from './catalogo';
-import ListadoDeProductos from './listadoDeProductos';
-import Footer from './footer';
-import Pedido from './pedidos';
-import Reportes2 from './reportes_compras';
-import Reportes1 from './reportes_ventas';
-import Clientes from './clientes';
-import Proveedores from './proveedores';
+import Navbar from './partes en comun/navbar';
+import Carrusel from './home/carrusel';
+import Hero from './home/hero';
+import Catalogo from './home/catalogo';
+import ListadoDeProductos from './productos/listadoDeProductos';
+import Footer from './partes en comun/footer';
+import Pedido from './pedidos/pedidos';
+import Reportes2 from './reportes/reportes_compras';
+import Reportes1 from './reportes/reportes_ventas';
+import Clientes from './clientes y proveedores/clientes';
+import Proveedores from './clientes y proveedores/proveedores';
 /* importamos cada componente */
 
 

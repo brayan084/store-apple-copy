@@ -7,7 +7,6 @@ import { ArrayClientes } from './arrayClientes';
  
 export default function Clientes() {
     const [products, setProducts] = useState(null);
-    const [statuses] = useState(['INSTOCK', 'LOWSTOCK', 'OUTOFSTOCK']);
 
     useEffect(() => {
         ArrayClientes.getProductsMini().then((data) => setProducts(data));

@@ -7,7 +7,6 @@ import { ArrayProveedores } from './arrayProveedores';
 
 export default function Proveedores() {
     const [products, setProducts] = useState(null);
-    const [statuses] = useState(['INSTOCK', 'LOWSTOCK', 'OUTOFSTOCK']);
 
     useEffect(() => {
         ArrayProveedores.getProductsMini().then((data) => setProducts(data));
