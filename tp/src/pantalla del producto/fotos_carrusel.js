@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Galleria } from 'primereact/galleria';
 import { PhotoService } from './PhotoService';
-import "./pantalla_producto.css"
 
-export default function BasicDemo() {
+
+export default function Carrusel_Producto() {
     const [images, setImages] = useState(null);
     const responsiveOptions = [
         {

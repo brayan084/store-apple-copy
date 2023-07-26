@@ -46,6 +46,11 @@ export default function Navbar() {
 
             ]
         },
+        {
+            label: 'pantalla',
+            icon: 'pi pi-fw pi-user-plus',
+            url:'/producto_iphone'
+        },
     ];
 
     return (
