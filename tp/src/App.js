@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<><><Hero /><Carrusel /></><Catalogo /></>}></Route>
           <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
-          <Route path='/proveedores' element={<Proveedores />}></Route>
+          <Route path='/formulario' element={<InputDemo />}></Route>
           <Route path='/clientes' element={<Clientes />}></Route>
           <Route path='/Pedidos' element={<Pedido />}></Route>
           <Route path='InputDemo' element={<InputDemo />}></Route>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
+import { Button } from 'primereact/button';
 
 export default function InputDemo() {
     const [value, setValue] = useState(0);
@@ -38,7 +39,7 @@ export default function InputDemo() {
 
 
     return ( 
-        <div className="justify-content-center p-fluid ">
+        <div className="justify-content-center p-fluid container">
             <div className="col-12 md:col-6">
                 <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
@@ -125,10 +126,15 @@ export default function InputDemo() {
                             <InputNumber className="p-inputtext-addon" placeholder="Precio de Compra" />
                             <span className="p-inputgroup-addon">.00</span>
                         </div>
+                        
 
-                    </div>
+                    </div><div className="card flex justify-content-center">
+                    <Button label="Enviar" />
                 </div>
+                </div>
+                
             </div>
+            
         </div>
     )
 }
