@@ -12,7 +12,7 @@ import Reportes2 from './reportes_compras';
 import Reportes1 from './reportes_ventas';
 import Clientes from './clientes';
 import Proveedores from './proveedores';
-import InputDemo from './input';
+import InputDemo from './formulario';
 /* importamos cada componente */
 
 
@@ -26,7 +26,7 @@ function App() {
           <Route path='/' element={<><><Hero /><Carrusel /></><Catalogo /></>}></Route>
           <Route path='/listadoDeProductos' element={<ListadoDeProductos />}></Route>
           <Route path='/proveedores' element={<Proveedores />}></Route>
-          <Route path='/input' element={<InputDemo />}></Route>
+          <Route path='/formulario' element={<InputDemo />}></Route>
           <Route path='/clientes' element={<Clientes />}></Route>
           <Route path='/Pedidos' element={<Pedido />}></Route>
           <Route path='/ReportesVentas' element={<Reportes1 />}></Route>

@@ -111,7 +111,7 @@ export default function ListadoDeProductos() {
             <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodyStyle={{ textAlign: 'center' }}>
                 <Column field="id" header="Id" editor={(options) => textEditor(options)}></Column>
                 <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)}></Column>
-                <Column field="nombreComercial" header="Nombre Comercial" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/input'>{rowData.nombreComercial}</Link>} ></Column>
+                <Column field="nombreComercial" header="Nombre Comercial" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formulario'>{rowData.nombreComercial}</Link>} ></Column>
                 <Column field="imagen" header="Imagen" body={imageBodyTemplate}></Column>
                 <Column field="precio" header="Precio" body={priceBodyTemplate} editor={(options) => priceEditor(options)} style={{ minWidth: '12rem' }}></Column>
                 <Column field="categoria" header="Categoría" editor={(options) => textEditor(options)}></Column>
