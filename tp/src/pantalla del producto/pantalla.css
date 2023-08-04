@@ -13,11 +13,6 @@
         ;
 }
 
-* {
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
 .fotos {
     grid-area: fotos;
     display: inline;
