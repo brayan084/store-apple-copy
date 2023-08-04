@@ -3,6 +3,8 @@ import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
+// este css se encuentra en la carpeta de clientes y proveedores
+import "../clientes y proveedores/formularios.css";
 
 export default function InputDemo() {
     const [value, setValue] = useState(0);
@@ -41,7 +43,7 @@ export default function InputDemo() {
     return ( 
         <div className="justify-content-center p-fluid container">
             <div className="col-12 md:col-6">
-                <div className="card">
+                <div className="card fondito">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
                         <div className="p-inputgroup flex-1">
                             <span className="p-inputgroup-addon">
@@ -128,7 +130,7 @@ export default function InputDemo() {
                         </div>
                         
 
-                    </div><div className="card flex justify-content-center">
+                    </div><div className="card fondito flex justify-content-center">
                     <Button label="Enviar" />
                 </div>
                 </div>
