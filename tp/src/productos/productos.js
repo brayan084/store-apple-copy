@@ -90,7 +90,7 @@ export const Productos = {
         ];
     },
 
-    getProductsMini() {
+    getProductsMini() { /* función que devuelve una promesa con los 6 elementos, "getProductsData" proporciona los datos */ 
         return Promise.resolve(this.getProductsData().slice(0, 6));
     },
 

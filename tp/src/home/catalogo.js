@@ -50,7 +50,8 @@ export default function Catalogo() {
                         </div>
                         <div className="flex sm:flex-column align-items-center sm:align-items-end gap-3 sm:gap-2">
                             <span className="text-2xl font-semibold">${product.precio}</span>
-                            <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button> {/* si el estatus del producto es OUTOFSTOCK, se desactiba el botón de compra */}
+                            <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button> 
+                            {/* si el estatus del producto es OUTOFSTOCK, se desactiba el botón de compra */}
                         </div>
                     </div>
                 </div>
@@ -83,7 +84,7 @@ export default function Catalogo() {
         );
     };
 
-    const itemTemplate = (product, layout) => {
+    const itemTemplate = (product, layout) => { /* condicional si layout es list, genera un listado y si layout es grid, genera una cuadricula (basadas en listItem y gridItem)  */
         if (!product) {
             return;
         }
@@ -93,7 +94,7 @@ export default function Catalogo() {
     };
 
     const header = () => {
-        return (
+        return ( /* permite seleccionar opciones de diseño para la vista de los datos. */ 
             <div className="flex justify-content-end">
                 <DataViewLayoutOptions layout={layout} onChange={(e) => setLayout(e.value)} />
             </div>

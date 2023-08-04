@@ -1,5 +1,5 @@
-
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { InputText } from 'primereact/inputtext';
@@ -7,10 +7,11 @@ import { ArrayClientes } from './arrayClientes';
  
 export default function Clientes() {
     const [products, setProducts] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     useEffect(() => {
         ArrayClientes.getProductsMini().then((data) => setProducts(data));
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, []); 
 
     
 
@@ -31,12 +32,11 @@ export default function Clientes() {
 
     return (
         <div className="card p-fluid">
-            <DataTable value={products} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
+            <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
                 <Column field="id" header="ID" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
-                <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
+                <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formularioPro'>{rowData.nombre}</Link>} style={{ width: '20%' }}></Column>
                 <Column field="cuit" header="Cuit" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
                 <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
-                
             </DataTable>
         </div>
     );

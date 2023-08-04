@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
 import { InputText } from 'primereact/inputtext';
@@ -10,6 +11,7 @@ import { Productos } from './productos';
 
 export default function ListadoDeProductos() {
     const [products, setProducts] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState(null);
     const [statuses] = useState(['INSTOCK', 'LOWSTOCK', 'OUTOFSTOCK']);
     const [venta] = useState(['Unidad', 'Kilo', 'Kilogramo', 'Gramo']);
 
@@ -106,10 +108,10 @@ export default function ListadoDeProductos() {
 
     return (
         <div className="p-fluid"> {/* componente de PrimeReact */}
-            <DataTable value={products} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodyStyle={{ textAlign: 'center' }}>
+            <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodyStyle={{ textAlign: 'center' }}>
                 <Column field="id" header="Id" editor={(options) => textEditor(options)}></Column>
                 <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)}></Column>
-                <Column field="nombreComercial" header="Nombre Comercial" editor={(options) => textEditor(options)} ></Column>
+                <Column field="nombreComercial" header="Nombre Comercial" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formulario'>{rowData.nombreComercial}</Link>} ></Column>
                 <Column field="imagen" header="Imagen" body={imageBodyTemplate}></Column>
                 <Column field="precio" header="Precio" body={priceBodyTemplate} editor={(options) => priceEditor(options)} style={{ minWidth: '12rem' }}></Column>
                 <Column field="categoria" header="Categoría" editor={(options) => textEditor(options)}></Column>
