@@ -20,6 +20,7 @@ import Pantalla_producto from './pantalla del producto/pantalla';
 function App() {
   return (
     <div> {/* usando "react-router-dom" creamos las rutas de los componentes */}
+      <h1>brayan merge</h1>
       <Router>
         <Navbar /> {/* menu */}
         <Routes>
