@@ -13,8 +13,8 @@ import Reportes1 from './reportes/reportes_ventas';
 import Clientes from './clientes y proveedores/clientes';
 import Proveedores from './clientes y proveedores/proveedores';
 import Pantalla_producto from './pantalla del producto/pantalla';
-import InputDemo from './formulario';
-import InputDemo2 from './formularioPro';
+import InputDemo from './productos/formulario';
+import InputDemo2 from './clientes y proveedores/formularioPro';
 /* importamos cada componente */
 
 
@@ -22,7 +22,6 @@ import InputDemo2 from './formularioPro';
 function App() {
   return (
     <div> {/* usando "react-router-dom" creamos las rutas de los componentes */}
-      <h1>brayan merge</h1>
       <Router>
         <Navbar /> {/* menu */}
         <Routes>
