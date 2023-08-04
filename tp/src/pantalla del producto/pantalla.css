@@ -13,6 +13,11 @@
         ;
 }
 
+* {
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
 .fotos {
     grid-area: fotos;
     display: inline;
@@ -36,8 +41,21 @@
     margin-bottom: 50px;
 }
 
+.titulo {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
 
-    @media screen and (max-width: 768px) {
+.carrusel_mas_productos {
+    margin-top: 50px;
+}
+
+.mas_productos {
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 768px) {
     .contenedor {
         grid-template-areas: 
         "fotos fotos"
