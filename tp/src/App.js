@@ -15,6 +15,7 @@ import Proveedores from './clientes y proveedores/proveedores';
 import Pantalla_producto from './pantalla del producto iphone/pantalla';
 import InputDemo from './productos/formulario';
 import InputDemo2 from './clientes y proveedores/formularioPro';
+import Pantalla_producto_ipods_max from './pantalla del producto ipod max/pantalla';
 /* importamos cada componente */
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path='/ReportesVentas' element={<Reportes1 />}></Route>
           <Route path='/ReportesCompras' element={<Reportes2 />}></Route>
           <Route path='/iphone' element={<Pantalla_producto />}></Route>
+          <Route path='/ipods-max' element={<Pantalla_producto_ipods_max />}></Route>
         </Routes>
         <Footer /> {/* pie de pagina */}
       </Router>

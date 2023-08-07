@@ -72,6 +72,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 384.63,
+                url: '/ipods-max',
             },
             {
                 id: '6', 
