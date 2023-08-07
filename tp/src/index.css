@@ -30,3 +30,10 @@ body {
   align-items: center;
   height: 50vh; 
 }
+
+.proveedores-container {
+  margin-bottom: 38rem;
+}
+.clientes-container {
+  margin-bottom: 9rem;
+}

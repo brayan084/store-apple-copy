@@ -31,15 +31,17 @@ export default function Proveedores() {
    
 
     return (
-        <div className="p-fluid">
-            <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
-                <Column field="id" header="ID" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
-                <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formularioPro'>{rowData.nombre}</Link>} style={{ width: '20%' }}></Column>
-                <Column field="cuit" header="Cuit" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
-                <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
-                
-            </DataTable>
-        </div>
+        <div className="proveedores-container">
+            <div className="p-fluid">
+                <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} tableStyle={{ minWidth: '50rem' }}>
+                    <Column field="id" header="ID" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
+                    <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formularioPro'>{rowData.nombre}</Link>} style={{ width: '20%' }}></Column>
+                    <Column field="cuit" header="Cuit" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
+                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
+
+                </DataTable>
+            </div>
+        </div> 
     );
 }
         
