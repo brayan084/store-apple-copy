@@ -33,7 +33,7 @@ export default function Carrusel_Producto() {
     }
 
     return (
-        <div className="card">
+        <div className="">
             <Galleria value={images} responsiveOptions={responsiveOptions} numVisible={3} style={{ maxWidth: '540px', borderRadius: '5px' }} 
                 item={itemTemplate} thumbnail={thumbnailTemplate} />
         </div>

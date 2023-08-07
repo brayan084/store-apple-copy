@@ -7,7 +7,7 @@ export default function Dropdown_color() {
     const items = Array.from({ length: 4 }).map((_, i) => ({ label: `${color[i]}`, value: i }));
 
     return (
-        <div className="card flex justify-content-left mt-3 mb-3">
+        <div className="flex justify-content-left mt-3 mb-3">
             <Dropdown value={selectedItem} onChange={(e) => setSelectedItem(e.value)} options={items} virtualScrollerOptions={{ itemSize: 38 }} 
                 placeholder="Seleccione un color" className="w-full md:w-14rem" />
         </div>

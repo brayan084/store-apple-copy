@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Button } from 'primereact/button';
-import "./formularios.css";
 
 export default function InputDemo2() {
     const [value, setValue] = useState(0);
@@ -11,7 +10,7 @@ export default function InputDemo2() {
     return (
         <div className="justify-content-center p-fluid container">
             <div className="col-12 md:col-6">
-                <div className="card fondito">
+                <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
                         <div className="p-inputgroup flex-1">
                             <span className="p-inputgroup-addon">
@@ -36,7 +35,7 @@ export default function InputDemo2() {
 
                     </div>
 
-                    <div className="card fondito flex justify-content-center">
+                    <div className="card flex justify-content-center">
                         <Button label="Enviar" />
                     </div>
                 </div>

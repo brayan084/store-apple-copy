@@ -3,8 +3,6 @@ import { InputText } from 'primereact/inputtext';
 import { InputNumber } from 'primereact/inputnumber';
 import { Dropdown } from 'primereact/dropdown';
 import { Button } from 'primereact/button';
-// este css se encuentra en la carpeta de clientes y proveedores
-import "../clientes y proveedores/formularios.css";
 
 export default function InputDemo() {
     const [value, setValue] = useState(0);

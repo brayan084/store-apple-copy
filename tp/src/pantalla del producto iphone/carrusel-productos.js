@@ -66,7 +66,7 @@ export default function Mas_productos() {
     };
 
     return (
-        <div className="card">
+        <div className="">
             <Carousel value={products} numVisible={6} numScroll={6} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />
         </div>
     )

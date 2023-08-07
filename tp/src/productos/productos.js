@@ -43,6 +43,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'appalex.ar',
                 compra: 850.00,
+                url: '/iphone',
             },
             {
                 id: '4',

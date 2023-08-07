@@ -12,7 +12,7 @@ import Reportes2 from './reportes/reportes_compras';
 import Reportes1 from './reportes/reportes_ventas';
 import Clientes from './clientes y proveedores/clientes';
 import Proveedores from './clientes y proveedores/proveedores';
-import Pantalla_producto from './pantalla del producto/pantalla';
+import Pantalla_producto from './pantalla del producto iphone/pantalla';
 import InputDemo from './productos/formulario';
 import InputDemo2 from './clientes y proveedores/formularioPro';
 /* importamos cada componente */
@@ -34,7 +34,7 @@ function App() {
           <Route path='/Pedidos' element={<Pedido />}></Route>
           <Route path='/ReportesVentas' element={<Reportes1 />}></Route>
           <Route path='/ReportesCompras' element={<Reportes2 />}></Route>
-          <Route path='/producto_iphone' element={<Pantalla_producto />}></Route>
+          <Route path='/iphone' element={<Pantalla_producto />}></Route>
         </Routes>
         <Footer /> {/* pie de pagina */}
       </Router>
