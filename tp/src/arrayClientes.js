@@ -1,3 +1,5 @@
+// En este JS se crea el array de objetos de clientes, indicando a cada cliente su correspondiente id, nombre y cuit.
+
 export  const ArrayClientes = {
     getProductsData() {
         return [
@@ -48,7 +50,7 @@ export  const ArrayClientes = {
             },
         ];
     },
-
+    // Función que devuelve una promesa, "getProductsData" proporciona los datos
     getProductsMini() {
         return Promise.resolve(this.getProductsData());
     },
