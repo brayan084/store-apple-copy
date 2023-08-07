@@ -60,6 +60,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'apjuan.ar',
                 compra: 733.00,
+                url: '/Ipad',
             },
             {
                 id: '5',
