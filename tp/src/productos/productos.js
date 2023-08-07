@@ -29,6 +29,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 900.00,
+                url: "/MacBook",
             },
             {
                 id: '3',

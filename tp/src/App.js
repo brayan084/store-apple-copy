@@ -16,6 +16,7 @@ import Pantalla_producto from './pantalla del producto iphone/pantalla';
 import InputDemo from './productos/formulario';
 import InputDemo2 from './clientes y proveedores/formularioPro';
 import Pantalla_producto_ipods_max from './pantalla del producto ipod max/pantalla';
+import Pantalla_producto_MacBook_Air from './pantalla del producto MacBook Air/pantalla';
 /* importamos cada componente */
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='/ReportesCompras' element={<Reportes2 />}></Route>
           <Route path='/iphone' element={<Pantalla_producto />}></Route>
           <Route path='/ipods-max' element={<Pantalla_producto_ipods_max />}></Route>
+          <Route path='/MacBook' element={<Pantalla_producto_MacBook_Air />}></Route>
         </Routes>
         <Footer /> {/* pie de pagina */}
       </Router>
