@@ -15,6 +15,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',  
                 compra: 10000.00,
+                url: '/imac',
             },
             {
                 id: '2',
