@@ -1,3 +1,5 @@
+ // En este JS se crea el array de objetos en este caso de Proveedores, indicando a cada proveedor su correspondiente id, nombre y cuit.
+
  export  const ArrayProveedores = {
     getProductsData() {
         return [
@@ -19,6 +21,8 @@
         ];
     },
 
+
+    // Función que devuelve una promesa, "getProductsData" proporciona los datos
     getProductsMini() {
         return Promise.resolve(this.getProductsData());
     },

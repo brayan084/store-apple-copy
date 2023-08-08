@@ -104,7 +104,7 @@ let midata = {
 export default function Reportes2() {
 
   return (
-    <div className='flex justify-content-center text-center py-4 px-4 mx-0 mt-8 lg:mx-8'>
+    <div className='flex justify-content-center text-center py-4 px-4 mx-0 mt-1 lg:mx-8'>
       <Bar data={midata} options={misoptions} />
     </div>
   )

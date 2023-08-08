@@ -37,11 +37,11 @@ export default function InputDemo() {
         { name: 'appalex', code: 'AA' },
     ];
 
-
-    return ( 
+    //Formulario, junte varios componentes como un Dropdown, InputNumber, entre otros. tambien dandole estilo con CSS
+    return (
         <div className="justify-content-center p-fluid container">
             <div className="col-12 md:col-6">
-                <div className="card fondito">
+                <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
                         <div className="p-inputgroup flex-1">
                             <span className="p-inputgroup-addon">
@@ -126,15 +126,15 @@ export default function InputDemo() {
                             <InputNumber className="p-inputtext-addon" placeholder="Precio de Compra" />
                             <span className="p-inputgroup-addon">.00</span>
                         </div>
-                        
 
-                    </div><div className="card fondito flex justify-content-center">
-                    <Button label="Enviar" />
+
+                    </div><div className="card flex justify-content-center">
+                        <Button label="Enviar" />
+                    </div>
                 </div>
-                </div>
-                
+
             </div>
-            
+
         </div>
     )
 }
