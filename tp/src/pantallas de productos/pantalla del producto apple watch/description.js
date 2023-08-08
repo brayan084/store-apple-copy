@@ -1,6 +1,7 @@
 import React from 'react';
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 
+/* Es la descripccion del producto */
 export default function Descripcion() {
     return (
         <Inplace>

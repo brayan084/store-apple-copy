@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dropdown } from 'primereact/dropdown';
 
+/* boton desplegable que contiene los colores a elegir del producto a comprar */
 export default function Dropdown_color() {
     let color = ["rojo", "azul", "amarillo", "verde", "negro", "blanco"];
     const [selectedItem, setSelectedItem] = useState(null);

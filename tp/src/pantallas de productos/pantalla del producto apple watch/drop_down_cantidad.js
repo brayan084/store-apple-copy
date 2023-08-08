@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dropdown } from 'primereact/dropdown';
 
+/* boton desplegable que contiene la cantidad del producto a comprar */
 export default function Dropdownn() {
     const [selectedItem, setSelectedItem] = useState(null);
     const items = Array.from({ length: 5 }).map((_, i) => ({ label: `${i}`, value: i }));

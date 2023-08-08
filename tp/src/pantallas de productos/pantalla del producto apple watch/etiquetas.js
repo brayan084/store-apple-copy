@@ -2,6 +2,7 @@
 import React from 'react';
 import { Chip } from 'primereact/chip';
 
+/* son etiquetas para los productos */
 export default function Etiquetas() {
     return (
         <div className="flex flex-wrap gap-2">

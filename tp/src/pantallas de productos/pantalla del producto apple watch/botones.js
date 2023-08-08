@@ -1,6 +1,7 @@
 import React from 'react'; 
 import { Button } from 'primereact/button';
 
+/* botones de 'comprar' y 'agregar al carrito' */
     export default function Botones_compra() {
     return (
         <div className="flex flex-wrap justify-content-left gap-5">

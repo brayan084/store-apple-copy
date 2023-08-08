@@ -2,8 +2,10 @@ export const PhotoService = {
   getData() {
     return [
       {
+        /* imagen principal que se ven grande en el carrusel */
         itemImageSrc:
           "https://i.ibb.co/mTTf8qM/Imagen-de-Whats-App-2023-08-07-a-las-20-09-45-1.jpg",
+        /* imagen de previsualizacion del carrusel */
         thumbnailImageSrc:
           "https://i.ibb.co/M283qDh/Imagen-de-Whats-App-2023-08-07-a-las-20-09-45-1-mini.png",
         alt: "",
