@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from 'primereact/button';
 import { Carousel } from 'primereact/carousel';
 import { Tag } from 'primereact/tag';
-import { Productos } from '../productos/productos';
+import { Productos } from '../../productos/productos';
 
 export default function Mas_productos() {
     const [products, setProducts] = useState([]);

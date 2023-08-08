@@ -8,7 +8,7 @@ import Botones_compra from "./botones";
 import Mas_productos from "./carrusel-productos";
 
 /* pantalla del producto iphone */
-export default function Pantalla_producto() {
+export default function Pantalla_producto_iphone() {
     return (
         <div>
             <div className="contenedor">
