@@ -108,7 +108,7 @@ export default function ListadoDeProductos() {
 
     return (
         <div className="p-fluid"> {/* componente de PrimeReact */}
-            <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodyStyle={{ textAlign: 'center' }}>
+            <DataTable value={products} selectionMode="single" selection={selectedProduct} onSelectionChange={(e) => setSelectedProduct(e.value)} editMode="row" dataKey="id" onRowEditComplete={onRowEditComplete} bodystyle={{ textAlign: 'center' }}>
                 <Column field="id" header="Id" editor={(options) => textEditor(options)}></Column>
                 <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} body={(rowData) => <Link to={rowData.url} className='producto_titulo'>{rowData.nombre}</Link>}></Column>
                 <Column field="nombreComercial" header="Nombre Comercial" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formulario'>{rowData.nombreComercial}</Link>} ></Column>

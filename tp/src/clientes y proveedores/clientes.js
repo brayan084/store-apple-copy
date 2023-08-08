@@ -37,7 +37,7 @@ export default function Clientes() {
                     <Column field="id" header="ID" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
                     <Column field="nombre" header="Nombre" editor={(options) => textEditor(options)} body={(rowData) => <Link to='/formularioPro'>{rowData.nombre}</Link>} style={{ width: '20%' }}></Column>
                     <Column field="cuit" header="Cuit" editor={(options) => textEditor(options)} style={{ width: '20%' }}></Column>
-                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
+                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodystyle={{ textAlign: 'center' }}></Column>
                 </DataTable>
             </div>
         </div>    

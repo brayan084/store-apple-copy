@@ -95,7 +95,7 @@ export default function Pedido() {
                     <Column field="fechaDeCarga" header="Fecha de Carga" editor={(options) => textEditor(options)} style={{ width: '17%' }}></Column>
                     <Column field="inventoryStatus" header="Estado" body={statusBodyTemplate} editor={(options) => statusEditor(options)} style={{ width: '13%' }}></Column>
                     <Column field="price" header="Precio" body={priceBodyTemplate} editor={(options) => priceEditor(options)} style={{ width: '17%' }}></Column>
-                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodyStyle={{ textAlign: 'center' }}></Column>
+                    <Column rowEditor headerStyle={{ width: '10%', minWidth: '8rem' }} bodystyle={{ textAlign: 'center' }}></Column>
                 </DataTable>
             </div>
         </div>
