@@ -1,22 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-<<<<<<< HEAD
-import Navbar from './navbar';
-import Carrusel from './carrusel';
-import Hero from './hero';
-import Catalogo from './catalogo';
-import ListadoDeProductos from './listadoDeProductos';
-import Footer from './footer';
-import Pedido from './pedidos';
-import Reportes2 from './reportes_compras';
-import Reportes1 from './reportes_ventas';
-import Clientes from './clientes';
-import Proveedores from './proveedores';
-import InputDemo from './formulario';
-import InputDemo2 from './formularioPro';
-/* importamos cada componente */  
-=======
 import Navbar from './partes en comun/navbar';
 import Carrusel from './home/carrusel';
 import Hero from './home/hero';
@@ -38,9 +22,6 @@ import Pantalla_producto_ipad from './pantallas de productos/pantalla del produc
 import Pantalla_producto_MacBook_Air from './pantallas de productos/pantalla del producto MacBook Air/pantalla';
 
 /* importamos cada componente */
->>>>>>> 4273f1b3c28444350ea60c6b1a876eb714f9dfb3
-
-
 
 function App() {
   return (
