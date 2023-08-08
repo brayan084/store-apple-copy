@@ -14,12 +14,8 @@ export const Productos = {
                 rating: 5,
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',  
-<<<<<<< HEAD:tp/src/productos.js
-                compra: 10000.00, 
-=======
                 compra: 10000.00,
                 url: '/imac',
->>>>>>> 4273f1b3c28444350ea60c6b1a876eb714f9dfb3:tp/src/productos/productos.js
             },
             {
                 id: '2',
