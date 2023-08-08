@@ -7,7 +7,7 @@ export default function Etiquetas() {
         <div className="flex flex-wrap gap-2">
             <Chip label="NUEVO" />
             <Chip label="ENVIO GRATIS" />
-            <Chip label="STOCK DISPONIBLE" />
+            <Chip label="QUEDAN 5" />
         </div>
     );
 }

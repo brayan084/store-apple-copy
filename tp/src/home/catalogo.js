@@ -35,10 +35,10 @@ export default function Catalogo() {
         return (
             <div className="col-12" id="catalogo"> {/* id para dare funcionabilidad al boton dentro del hero */}
                 <div className="flex flex-column xl:flex-row xl:align-items-start p-4 gap-4"> {/* las imagenes fueron subidas a imgBB, convina la parte fija "https://i.ibb.co/" con cada valor dinamico de "product.imagen" */}
-                    <img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} />
+                    <a href={product.url}><img className="w-9 sm:w-16rem xl:w-10rem shadow-2 block xl:block mx-auto border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} /></a>
                     <div className="flex flex-column sm:flex-row justify-content-between align-items-center xl:align-items-start flex-1 gap-4">
                         <div className="flex flex-column align-items-center sm:align-items-start gap-3">
-                            <div className="text-2xl font-bold text-900">{product.nombreComercial}</div>
+                            <a href={product.url} className='producto_titulo'><div className="text-2xl font-bold text-900">{product.nombreComercial}</div></a>
                             <Rating value={product.rating} readOnly cancel={false}></Rating>
                             <div className="flex align-items-center gap-3">
                                 <span className="flex align-items-center gap-2">
@@ -71,8 +71,8 @@ export default function Catalogo() {
                         <Tag value={product.inventoryStatus} severity={getSeverity(product)}></Tag>
                     </div>
                     <div className="flex flex-column align-items-center gap-3 py-5">
-                        <img className="w-9 shadow-2 border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} />
-                        <div className="text-2xl font-bold">{product.nombreComercial}</div>
+                        <a href={product.url} className='fotito'><img className="w-9 shadow-2 border-round" src={`https://i.ibb.co/${product.imagen}`} alt={product.nombre} /></a>
+                        <a href={product.url} className='producto_titulo'><div className="text-2xl font-bold">{product.nombreComercial}</div></a>
                         <Rating value={product.rating} readOnly cancel={false}></Rating>
                     </div>
                     <div className="flex align-items-center justify-content-between">

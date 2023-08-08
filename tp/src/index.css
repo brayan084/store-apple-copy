@@ -132,3 +132,18 @@ body {
 }
 
 /* --------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* css del catalogo y el carrusel de productos en cada pantalla de producto */
+
+.fotito {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.producto_titulo {
+  color: white;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------- */
