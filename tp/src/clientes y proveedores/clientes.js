@@ -14,7 +14,7 @@ export default function Clientes() {
     }, []); 
 
     
-
+    //Funcion que guarda los datos cuando esta es modficada
     const onRowEditComplete = (e) => {
         let _products = [...products];
         let { newData, index } = e;
@@ -23,7 +23,7 @@ export default function Clientes() {
 
         setProducts(_products);
     };
-
+    //Funcion que sirve para mostrar el input de texto
     const textEditor = (options) => {
         return <InputText type="text" value={options.value} onChange={(e) => options.editorCallback(e.target.value)} />;
     };
