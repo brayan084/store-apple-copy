@@ -29,6 +29,7 @@ function App() {
   return (
     <div> {/* usando "react-router-dom" creamos las rutas de los componentes */}
       <Router>
+        <h1>hola mundo</h1>
         <Navbar /> {/* menu */}
         <Routes>
           <Route path='/' element={<><><Hero /><Carrusel /></><Catalogo /></>}></Route>
