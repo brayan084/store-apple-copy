@@ -14,7 +14,7 @@ import Clientes from './clientes';
 import Proveedores from './proveedores';
 import InputDemo from './formulario';
 import InputDemo2 from './formularioPro';
-/* importamos cada componente */
+/* importamos cada componente */  
 
 
 

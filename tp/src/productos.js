@@ -6,7 +6,7 @@ export const Productos = {
                 id: '1',
                 nombre: 'iMac',
                 nombreComercial: 'Apple iMac 27-Inch Desktop 3.4 Ghz Intel Core I7',
-                imagen: 'hscyhz2/imac.png"',              
+                imagen: 'hscyhz2/imac.png',              
                 precio: 700999,
                 categoria: 'Tecnología',
                 cantidad: 24,
@@ -14,7 +14,7 @@ export const Productos = {
                 rating: 5,
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',  
-                compra: 10000.00,
+                compra: 10000.00, 
             },
             {
                 id: '2',
