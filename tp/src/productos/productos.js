@@ -90,6 +90,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'appalex.ar',
                 compra: 350.00,
+                url: '/apple-watch',
             },
 
         ];

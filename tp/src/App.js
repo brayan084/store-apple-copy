@@ -19,6 +19,7 @@ import Pantalla_producto_ipods_max from './pantalla del producto ipod max/pantal
 import Pantalla_producto_MacBook_Air from './pantalla del producto MacBook Air/pantalla';
 import Pantalla_producto_imac from './pantalla del producto imac/pantalla';
 import Pantalla_producto_ipad from './pantalla del producto ipad/pantalla';
+import Pantalla_producto_watch from './pantalla del producto apple watch/pantalla';
 /* importamos cada componente */
 
 
@@ -43,6 +44,7 @@ function App() {
           <Route path='/MacBook' element={<Pantalla_producto_MacBook_Air />}></Route>
           <Route path='/Imac' element={<Pantalla_producto_imac />}></Route>
           <Route path='/Ipad' element={<Pantalla_producto_ipad />}></Route>
+          <Route path='/apple-watch' element={<Pantalla_producto_watch />}></Route>
         </Routes>
         <Footer /> {/* pie de pagina */}
       </Router>
