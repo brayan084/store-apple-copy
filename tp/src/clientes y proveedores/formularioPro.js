@@ -8,7 +8,7 @@ export default function InputDemo2() {
 
 
     return (
-        <div className="justify-content-center p-fluid container">
+        <div className="justify-content-center p-fluid container form">
             <div className="col-12 md:col-6">
                 <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">

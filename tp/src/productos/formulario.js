@@ -39,7 +39,7 @@ export default function InputDemo() {
 
     //Formulario, junte varios componentes como un Dropdown, InputNumber, entre otros. tambien dandole estilo con CSS
     return (
-        <div className="justify-content-center p-fluid container">
+        <div className="justify-content-center p-fluid container form">
             <div className="col-12 md:col-6">
                 <div className="card">
                     <div className="justify-content-center flex flex-column md:flex-row gap-3">
