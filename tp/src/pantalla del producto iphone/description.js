@@ -1,5 +1,4 @@
 import React from 'react';
-import "./pantalla.css";
 import { Inplace, InplaceDisplay, InplaceContent } from 'primereact/inplace';
 
 export default function Descripcion() {

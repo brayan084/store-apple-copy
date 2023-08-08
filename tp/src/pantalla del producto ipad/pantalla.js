@@ -1,5 +1,4 @@
 import React from "react";
-import "./pantalla.css";
 import Carrusel_Producto from "./fotos_carrusel";
 import Descripcion from "./description";
 import Dropdownn from "./drop_down_cantidad";
@@ -8,6 +7,7 @@ import Etiquetas from "./etiquetas";
 import Botones_compra from "./botones";
 import Mas_productos from "./carrusel-productos";
 
+/* pantalla del producto ipad */
 export default function Pantalla_producto_ipad() {
     return (
         <div>
