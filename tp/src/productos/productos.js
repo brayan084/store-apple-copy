@@ -15,6 +15,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',  
                 compra: 10000.00,
+                url: '/imac',
             },
             {
                 id: '2',
@@ -29,6 +30,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 900.00,
+                url: "/MacBook",
             },
             {
                 id: '3',
@@ -43,6 +45,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'appalex.ar',
                 compra: 850.00,
+                url: '/iphone',
             },
             {
                 id: '4',
@@ -57,6 +60,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'apjuan.ar',
                 compra: 733.00,
+                url: '/Ipad',
             },
             {
                 id: '5',
@@ -71,6 +75,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'aptecno.ar',
                 compra: 384.63,
+                url: '/ipods-max',
             },
             {
                 id: '6', 
@@ -85,6 +90,7 @@ export const Productos = {
                 unidadDeMedida:'Unidad',
                 proveedor: 'appalex.ar',
                 compra: 350.00,
+                url: '/apple-watch',
             },
 
         ];

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Productos } from './productos';
+import { Productos } from '../productos/productos';
 import { Button } from 'primereact/button';
 import { DataView, DataViewLayoutOptions } from 'primereact/dataview';
 import { Rating } from 'primereact/rating';
@@ -77,7 +77,7 @@ export default function Catalogo() {
                     </div>
                     <div className="flex align-items-center justify-content-between">
                         <span className="text-2xl font-semibold">${product.precio}</span>
-                        <Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button>
+                        <a href={`${product.url}`}><Button icon="pi pi-shopping-cart" className="p-button-rounded" disabled={product.inventoryStatus === 'OUTOFSTOCK'}></Button></a>
                     </div>
                 </div>
             </div>
