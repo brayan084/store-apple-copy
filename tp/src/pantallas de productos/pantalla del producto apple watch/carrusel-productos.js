@@ -5,7 +5,10 @@ import { Carousel } from 'primereact/carousel';
 import { Tag } from 'primereact/tag';
 import { Productos } from '../../productos/productos';
 
+/* es el carrusel que esta al finalizar la pantalla del producto contiene mas producto del website */
 export default function Mas_productos() {
+
+/* tamaño y ajustes de el carrusel */
     const [products, setProducts] = useState([]);
     const responsiveOptions = [
         {
@@ -25,6 +28,7 @@ export default function Mas_productos() {
         }
     ];
 
+/* depende en que estado se encuentre el producto le cambia el color a la etiqueta de 'INSTOCK' */ 
     const getSeverity = (product) => {
         switch (product.inventoryStatus) {
             case 'INSTOCK':
@@ -41,10 +45,12 @@ export default function Mas_productos() {
         }
     };
 
+    /* obtiene los productos de la base de datos */
     useEffect(() => {
         Productos.getProductsSmall().then((data) => setProducts(data.slice(0, 9)));
     }, []);
 
+/* template del carrusel  */
     const productTemplate = (product) => {
         return (
             <div className="border-1 surface-border border-round m-2 text-center py-5 px-3">
@@ -64,7 +70,7 @@ export default function Mas_productos() {
             </div>
         );
     };
-
+/* esto sirve para que sea responsive y para configurar cuantos productos se muestran y el numero de scrolls */
     return (
         <div className="">
             <Carousel value={products} numVisible={6} numScroll={6} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} />

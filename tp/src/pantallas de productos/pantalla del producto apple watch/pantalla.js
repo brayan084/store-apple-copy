@@ -12,6 +12,7 @@ export default function Pantalla_producto_watch() {
     return (
         <div>
             <div className="contenedor">
+                {/* fotos principales del producto */}
                 <div className="fotos">
                     <Carrusel_Producto />
                 </div>
